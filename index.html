@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!---------------------------- Link to Stylesheet -------------------------------->
+
+    <link rel="stylesheet" href="../12220034_game/cssFile/util.css" />
+    <link rel="stylesheet" href="../12220034_game/cssFile/style.css">
+    <title>Shoot 'em Up</title>
+  </head>
+  <body>
+    <img src="../12220034_game/imageAssets/crosshair.png" class="cursor" alt="crosshair" />
+    <!-- Difficulty selection and instruction page -->
+    <section class="bg">
+      <div class="fcontainer">
+        <h1>Choose Your Difficulty:</h1>
+        <div class="btns">
+          <div class="options">
+            <div class="modeImg" onclick="setEasy()">
+              <img src="../12220034_game/imageAssets/easy.jpg" alt="" />
+            </div>
+            <button
+              class="start"
+              onclick="setEasy(); hideMenu(); showGame(); none();"
+            >
+              Easy
+            </button>
+          </div>
+          <div class="options">
+            <div class="modeImg" onclick="setMid()">
+              <img src="../12220034_game/imageAssets/medium.jpg" alt="" />
+            </div>
+            <button
+              class="controls"
+              onclick="setMid(); hideMenu(); showGame(); none();"
+            >
+              Medium
+            </button>
+          </div>
+          <div class="options">
+            <div class="modeImg" onclick="setHrd()">
+              <img src="../12220034_game/imageAssets/god-mode.jpg" alt="" />
+            </div>
+            <button
+              class="control"
+              onclick="setHrd(); hideMenu(); showGame(); none();"
+            >
+              ___
+            </button>
+          </div>
+        </div>
+        <div class="btns">
+          <a href="../12220034_game/html/instructions.html"><button>Instructions</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actual game page, hodden at first -->
+    <section class="game hide">
+      <div class="gameContainer">
+        <button type="button" class="startButton" onclick="gameStart()">
+          Start
+        </button>
+        <button type="button" class="score" id="score">Score:</button>
+
+        <img
+          src="../12220034_game/imageAssets/bullethole.png"
+          class="bullethole"
+          alt="bullethole"
+        />
+
+        <button class="highscore"><img src="" alt="" /></button>
+        <button class="lives" id="tries"></button>
+        <button class="restart" id="restart" onclick="again()"></button>
+      </div>
+    </section>
+
+    <!-- All other Javascript Links -->
+    <script src="../12220034_game/JS files/functions.js"></script>
+    <script src="../12220034_game/JS files/mainscript.js"></script>
+  </body>
+</html>
